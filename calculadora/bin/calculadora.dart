@@ -3,6 +3,7 @@ import 'dart:io';
 void main() {
   double numeroUm = double.parse(stdin.readLineSync()!);
   double numeroDois = double.parse(stdin.readLineSync()!);
+  String operacao = stdin.readLineSync()!;
 
   void soma() {
     print(numeroUm + numeroDois);
@@ -20,5 +21,19 @@ void main() {
     print(numeroUm * numeroDois);
   }
 
-  soma();
+  switch (operacao) {
+    case '+':
+      soma();
+
+    case '-':
+      subtracao();
+
+    case '*':
+      multiplicacao();
+
+    case '/':
+      divisao();
+
+      break;
+  }
 }
