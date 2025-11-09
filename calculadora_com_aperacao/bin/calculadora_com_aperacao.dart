@@ -21,19 +21,19 @@ void main() {
     print(numeroUm * numeroDois);
   }
 
-  if (operacao == '+') {
-    soma();
-  }
+  switch (operacao) {
+    case '+':
+      soma();
 
-  if (operacao == '-') {
-    subtracao();
-  }
+    case '-':
+      subtracao();
 
-  if (operacao == '*') {
-    multiplicacao();
-  }
+    case '*':
+      multiplicacao();
 
-  if (operacao == '/') {
-    divisao();
+    case '/':
+      divisao();
+
+      break;
   }
 }
