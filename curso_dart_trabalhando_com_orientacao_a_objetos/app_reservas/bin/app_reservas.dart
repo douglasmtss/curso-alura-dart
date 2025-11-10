@@ -1,30 +1,54 @@
-class Cliente {
-  String nome;
-  List<String> _reservas;
+void main() {
+  QuartoSimples quartoSimples = QuartoSimples(3);
+  quartoSimples.reservar();
+  quartoSimples.calcularValorTotal();
+  QuartoMedio quartoMedio = QuartoMedio(5);
+  quartoMedio.reservar();
+  quartoMedio.servirCafeDaManha();
+  quartoMedio.calcularValorTotal();
+  QuartoLuxo quartoLuxo = QuartoLuxo(7);
+  quartoLuxo.reservar();
+  quartoLuxo.servirCafeDaManha();
+  quartoLuxo.servicoDeQuarto();
+  quartoLuxo.calcularValorTotal();
+}
 
-  Cliente(this.nome, this._reservas);
+abstract class Quarto {
+  String tipo;
+  double valorDiaria;
+  int diarias;
 
-  void fazerReserva(String quarto) {
-    _reservas.add(quarto);
-    _mostrarReservas();
+  Quarto(this.diarias, this.valorDiaria, this.tipo);
+
+  void reservar() {
+    print("Reserva realizada para $diarias diarias no quarto $tipo.");
   }
 
-  void cancelarReserva(String quarto) {
-    if (_reservas.contains(quarto)) {
-      _reservas.remove(quarto);
-      _mostrarReservas();
-    }
-  }
-
-  void _mostrarReservas() {
-    print(_reservas);
+  void calcularValorTotal() {
+    print("Total a pagar: R\$${diarias * valorDiaria}");
   }
 }
 
-void main() {
-  Cliente cliente = Cliente('Joaquim', []);
-  cliente.fazerReserva('101');
-  cliente.fazerReserva('102');
-  cliente.fazerReserva('103');
-  cliente.cancelarReserva('102');
+class QuartoSimples extends Quarto {
+  QuartoSimples(int diarias) : super(diarias, 80, 'Simples');
+}
+
+class QuartoMedio extends Quarto {
+  QuartoMedio(int diarias) : super(diarias, 250, 'Médio');
+
+  void servirCafeDaManha() {
+    print("Servindo cafe da manha no quarto $tipo.");
+  }
+}
+
+class QuartoLuxo extends Quarto {
+  QuartoLuxo(int diarias) : super(diarias, 1000, 'Luxo');
+
+  void servirCafeDaManha() {
+    print("Servindo cafe da manha no quarto $tipo.");
+  }
+
+  void servicoDeQuarto() {
+    print("Limpando quarto $tipo.");
+  }
 }
