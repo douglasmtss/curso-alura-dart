@@ -1,5 +1,5 @@
 // Classe base Ingrediente
-class Ingrediente {
+abstract class Ingrediente {
   String nome;
   String tipo;
 
