@@ -1,5 +1,5 @@
 // Classe base Animal
-class Animal {
+abstract class Animal {
   void emitirSom() {
     print("O animal emitiu um som.");
   }
