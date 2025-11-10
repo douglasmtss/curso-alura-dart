@@ -18,6 +18,13 @@ void main() {
   for (ItemEstoque item in itemsEstoque) {
     print('Produto: ${item.nome}, Quantidade em estoque: ${item.quantidade}');
   }
+
+  itemsEstoque[0].setQuantidade(20); // Smartphone
+  itemsEstoque[1].retirada(10); // Notebook
+
+  for (ItemEstoque item in itemsEstoque) {
+    print('Produto: ${item.nome}, Quantidade em estoque: ${item.quantidade}');
+  }
 }
 
 class ItemEstoque {
@@ -25,4 +32,17 @@ class ItemEstoque {
   int quantidade;
 
   ItemEstoque(this.nome, this.quantidade);
+
+  void setQuantidade(int? quantidade) {
+    if (quantidade != null && quantidade > 0) {
+      this.quantidade += quantidade;
+    }
+  }
+
+  int? retirada(int? quantidade) {
+    if (quantidade != null && quantidade > 0) {
+      this.quantidade -= quantidade;
+    }
+    return this.quantidade;
+  }
 }
