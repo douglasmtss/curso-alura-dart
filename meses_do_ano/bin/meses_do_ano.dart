@@ -12,43 +12,50 @@ void main() {
     }
   }
 
-  switch (numero) {
-    case 1:
-      print('janeiro');
-      break;
-    case 2:
-      print('fevereiro');
-      break;
-    case 3:
-      print('março');
-      break;
-    case 4:
-      print('abril');
-      break;
-    case 5:
-      print('maio');
-      break;
-    case 6:
-      print('junho');
-      break;
-    case 7:
-      print('julho');
-      break;
-    case 8:
-      print('agosto');
-      break;
-    case 9:
-      print('setembro');
-      break;
-    case 10:
-      print('outrubro');
-      break;
-    case 11:
-      print('novembro');
-      break;
-    case 12:
-      print('dezembro');
-      break;
-    default:
+  String obterMes(int numero) {
+    switch (numero) {
+      case 1:
+        return 'janeiro';
+
+      case 2:
+        return 'fevereiro';
+
+      case 3:
+        return 'março';
+
+      case 4:
+        return 'abril';
+
+      case 5:
+        return 'maio';
+
+      case 6:
+        return 'junho';
+
+      case 7:
+        return 'julho';
+
+      case 8:
+        return 'agosto';
+
+      case 9:
+        return 'setembro';
+
+      case 10:
+        return 'outrubro';
+
+      case 11:
+        return 'novembro';
+
+      case 12:
+        return 'dezembro';
+
+      default:
+        return 'Número inválido. Por favor, insira um número de 1 a 12.';
+    }
   }
+
+  String mes = obterMes(numero);
+
+  print(mes);
 }
