@@ -1,3 +1,5 @@
+import 'package:anybank/conta.dart';
+
 void main() {
   Conta contaMatheus = Conta('Matheus', 1000);
   Conta contaMaria = Conta('Maria', 2000);
@@ -5,18 +7,10 @@ void main() {
   List<Conta> contas = <Conta>[contaMatheus, contaMaria];
 
   for (Conta conta in contas) {
-    print(conta.titular);
-    print(conta.saldo);
+    conta.imprimeSaldo();
   }
 
-  contaMaria.saldo = 5000;
-
-  print(contaMaria.saldo);
-}
-
-class Conta {
-  String titular;
-  double saldo;
-
-  Conta(this.titular, this.saldo);
+  contaMaria.receber(3000);
+  contaMatheus.receber(500);
+  contaMatheus.enviar(200);
 }
