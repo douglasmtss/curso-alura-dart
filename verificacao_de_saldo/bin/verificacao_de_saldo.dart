@@ -9,9 +9,15 @@ void main() {
   print('Digite o valor do Pix que deseja realizar:');
   double valorPix = double.parse(stdin.readLineSync()!);
 
-  if (saldo >= valorPix) {
-    print(saldo - valorPix);
+  realizarPix(valorPix);
+}
+
+void realizarPix(double valor) {
+  if (valor <= saldo) {
+    saldo -= valor;
+    print('Pix de R\$${valor.toStringAsFixed(2)} realizado com sucesso.');
+    print('Seu novo saldo é de: R\$${saldo.toStringAsFixed(2)}');
   } else {
-    print('Saldo insuficiente');
+    print('Saldo insuficiente para realizar o Pix.');
   }
 }
