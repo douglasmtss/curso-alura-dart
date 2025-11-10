@@ -3,11 +3,12 @@ import 'dart:io';
 void main() {
   List<String> notas = <String>[];
 
+  cabecalho();
   menu(notas);
 }
 
 String getComando() {
-  print('Digite um comando: 1-Adicionar nota, 2-Listar notas, 3-Sair');
+  print('Digite um comando: 1 - Adicionar nota, 2 - Listar notas, 3 - Sair');
 
   List<String> comandos = <String>['1', '2', '3'];
 
@@ -46,7 +47,9 @@ void listarNotas(List<String> notas) {
 }
 
 void menu(List<String> notas) {
+  print("");
   String comando = getComando();
+  print("");
 
   switch (comando) {
     case '1':
@@ -58,4 +61,12 @@ void menu(List<String> notas) {
     case '3':
       print('Até breve!');
   }
+}
+
+void cabecalho() {
+  print("  _  _     _           ");
+  print(" | \| |___| |_ __ _ ___");
+  print(" | .\` / _ \  _/ _\` (_-<");
+  print(" |_|\_\___/\__\__,_/__/");
+  print("                       ");
 }
