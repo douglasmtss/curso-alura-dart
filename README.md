@@ -17,3 +17,4 @@ Iniciando os estudos sobre Dart e Flutter na Alura.
 - [Mapas em Dart](https://api.dart.dev/dart-core/Map-class.html)
 - [Set em Dart](https://api.dart.dev/dart-core/Set-class.html)
 - [List em Dart](https://api.dart.dev/dart-core/List-class.html)
+- [Tipos de construtores em Dart: guia prático para iniciantes](https://www.alura.com.br/artigos/construtores-dart-tipos-como-usa-los)
