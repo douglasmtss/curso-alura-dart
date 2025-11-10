@@ -10,3 +10,8 @@ Iniciando os estudos sobre Dart e Flutter na Alura.
 
 ## Links
 - [Top 10 Array utility methods you should know (Dart)](https://codeburst.io/top-10-array-utility-methods-you-should-know-dart-feb2648ee3a2)
+- [Dart Pad](https://dartpad.dev/)
+- [Dart Collections](https://dart.dev/language/collections)
+- [Mapas em Dart](https://api.dart.dev/dart-core/Map-class.html)
+- [Set em Dart](https://api.dart.dev/dart-core/Set-class.html)
+- [List em Dart](https://api.dart.dev/dart-core/List-class.html)
