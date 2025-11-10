@@ -21,4 +21,18 @@ void main() {
 
   contaDenize.imprimeSaldo();
   contaDenize.enviar(300);
+
+  contaChris.imprimeSaldo();
+  contaChris.enviar(100);
+
+  contaDenize.imprimeSaldo();
+  contaDenize.receber(300);
+
+  contaChris.imprimeSaldo();
+  contaChris.enviar(4300);
+
+  contaDenize.imprimeSaldo();
+  contaDenize.enviar(4300);
+  contaDenize.calculaRendimento();
+  contaDenize.imprimeSaldo();
 }
