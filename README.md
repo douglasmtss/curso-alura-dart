@@ -10,6 +10,8 @@ Iniciando os estudos sobre Dart e Flutter na Alura.
 
 - [Curso de Dart: trabalhando com orientação a objetos](./curso_dart_trabalhando_com_orientacao_a_objetos/)
 
+- [Curso de Dart: dominando assincronismo e criando comunicação com APIs](./curso_dart_dominando_assincronismo_e_criando_comunicacao_com_apis/)
+
 ## Links
 - [Top 10 Array utility methods you should know (Dart)](https://codeburst.io/top-10-array-utility-methods-you-should-know-dart-feb2648ee3a2)
 - [Dart Pad](https://dartpad.dev/)
@@ -18,3 +20,5 @@ Iniciando os estudos sobre Dart e Flutter na Alura.
 - [Set em Dart](https://api.dart.dev/dart-core/Set-class.html)
 - [List em Dart](https://api.dart.dev/dart-core/List-class.html)
 - [Tipos de construtores em Dart: guia prático para iniciantes](https://www.alura.com.br/artigos/construtores-dart-tipos-como-usa-los)
+- [Pub Dev](https://pub.dev/)
+- [How to use packages](https://dart.dev/tools/pub/packages)
