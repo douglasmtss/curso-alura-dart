@@ -8,6 +8,8 @@ Iniciando os estudos sobre Dart e Flutter na Alura.
 
 - [Curso de Praticando Collections no Dart: listas, sets e mapas](./curso_dart_praticando_collections_no_dart_listas_sets_e_mapas/)
 
+- [Curso de Dart: trabalhando com orientação a objetos](./curso_dart_trabalhando_com_orientacao_a_objetos/)
+
 ## Links
 - [Top 10 Array utility methods you should know (Dart)](https://codeburst.io/top-10-array-utility-methods-you-should-know-dart-feb2648ee3a2)
 - [Dart Pad](https://dartpad.dev/)
