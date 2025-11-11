@@ -16,7 +16,7 @@ class Account {
       id: map['id'],
       name: map['name'],
       lastName: map['lastName'],
-      balance: map['balance'],
+      balance: map['balance'].toDouble(),
     );
   }
 

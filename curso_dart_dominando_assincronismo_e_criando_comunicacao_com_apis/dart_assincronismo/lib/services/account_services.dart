@@ -34,7 +34,7 @@ class AccountServices {
     return listAccounts;
   }
 
-  void addAccount(Account account) async {
+  Future<void> addAccount(Account account) async {
     List<Account> listAccounts = await getAll();
 
     listAccounts.add(account);
