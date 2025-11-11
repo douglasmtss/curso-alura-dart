@@ -12,6 +12,8 @@ Iniciando os estudos sobre Dart e Flutter na Alura.
 
 - [Curso de Dart: dominando assincronismo e criando comunicação com APIs](./curso_dart_dominando_assincronismo_e_criando_comunicacao_com_apis/)
 
+- [Curso de Dart: lidando com erros, exceções e null safety](./curso_dart_lidando_com_erros_excecoes_e_null_safety/)
+
 ## Links
 - [Top 10 Array utility methods you should know (Dart)](https://codeburst.io/top-10-array-utility-methods-you-should-know-dart-feb2648ee3a2)
 - [Dart Pad](https://dartpad.dev/)
