@@ -1,2 +1,1 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+# [Github Gist API](https://docs.github.com/en/rest/gists/gists?apiVersion=2022-11-28#get-a-gist)

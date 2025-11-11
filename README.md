@@ -22,3 +22,4 @@ Iniciando os estudos sobre Dart e Flutter na Alura.
 - [Tipos de construtores em Dart: guia prático para iniciantes](https://www.alura.com.br/artigos/construtores-dart-tipos-como-usa-los)
 - [Pub Dev](https://pub.dev/)
 - [How to use packages](https://dart.dev/tools/pub/packages)
+- [Github Gist API](https://docs.github.com/en/rest/gists/gists?apiVersion=2022-11-28#get-a-gist)
