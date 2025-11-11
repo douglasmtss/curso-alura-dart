@@ -1,10 +1,20 @@
+import 'dart:async';
+
 import 'package:http/http.dart';
 import 'dart:convert';
 import 'api_key.dart';
 
+StreamController<String> streamController = StreamController<String>();
+
 void main() {
-  // requestData();
-  // requestDataAsync();
+  StreamSubscription streamSubscription = streamController.stream.listen((
+    String info,
+  ) {
+    print(info);
+  });
+
+  requestData();
+  requestDataAsync();
   sendDataAsync({
     'id': 'NEW001',
     'name': 'Flutter',
@@ -21,22 +31,11 @@ void requestData() {
 
   Future<Response> futureResponse = get(uri);
 
-  print(futureResponse);
-
   futureResponse.then((Response response) {
-    print(response);
-    print(response.body);
-
-    List<dynamic> listAccounts = json.decode(response.body);
-
-    Map<String, dynamic> mapCarla = listAccounts.firstWhere(
-      (element) => element['name'].toString().toLowerCase() == 'carla',
+    streamController.add(
+      '${DateTime.now()} | Requisição de leitura (usando then).',
     );
-
-    print(mapCarla['balance']);
   });
-
-  print('Última coisa a acontecer na função.');
 }
 
 Future<List<dynamic>> requestDataAsync() async {
@@ -46,6 +45,7 @@ Future<List<dynamic>> requestDataAsync() async {
   Uri uri = Uri.parse(url);
 
   Response response = await get(uri);
+  streamController.add('${DateTime.now()} | Requisição de leitura');
 
   return json.decode(response.body);
 }
@@ -73,5 +73,13 @@ void sendDataAsync(Map<String, dynamic> mapAccount) async {
     }),
   );
 
-  print(response.statusCode);
+  if (response.statusCode.toString()[0] == '2') {
+    streamController.add(
+      '${DateTime.now()} | Requisição bem sucedida. (${mapAccount['name']})',
+    );
+  } else {
+    streamController.add(
+      '${DateTime.now()} | Requisição falhou. (${mapAccount['name']})',
+    );
+  }
 }
