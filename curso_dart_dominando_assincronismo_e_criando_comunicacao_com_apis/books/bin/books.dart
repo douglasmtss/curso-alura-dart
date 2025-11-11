@@ -2,10 +2,10 @@ import 'package:http/http.dart';
 import 'dart:convert';
 
 void main() {
-  fetchBooks();
+  fetchBooksByAuthor('machado de assis');
 }
 
-void fetchBooks() async {
+void fetchBooksByAuthor(String author) async {
   String url =
       'https://raw.githubusercontent.com/alura-cursos/dart_assincronismo_api/aula05/.json/books.json';
 
@@ -15,11 +15,11 @@ void fetchBooks() async {
 
   List<dynamic> books = json.decode(response.body);
 
-  Iterable<dynamic> booksOf = books.where(
-    (book) => book['author'].toString().toLowerCase() == 'machado de assis',
-  );
+  List<dynamic> booksOf = books
+      .where((book) => book['author'].toString().toLowerCase() == author)
+      .toList();
 
-  for (var bookOf in booksOf) {
-    print(bookOf['title']);
+  for (dynamic bookOf in booksOf) {
+    print('Título: ${bookOf['title']}');
   }
 }
