@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "dart_exceptions",
+            "request": "launch",
+            "type": "dart",
+            "program": "curso_dart_lidando_com_erros_excecoes_e_null_safety/dart_exceptions_ns-main/bin/main.dart",
+            "args": [],
+            "toolArgs": [],
+            "console": "terminal"
+        }
+    ]
+}
