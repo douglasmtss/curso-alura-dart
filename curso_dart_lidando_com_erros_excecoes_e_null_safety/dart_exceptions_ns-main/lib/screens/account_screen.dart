@@ -76,11 +76,11 @@ class AccountScreen {
   _addExampleAccount() async {
     try {
       Account example = Account(
-        id: "ID555",
-        name: "Haley",
-        lastName: "Chirívia",
-        balance: 8001,
-      );
+          id: "ID555",
+          name: "Haley",
+          lastName: "Chirívia",
+          balance: 8001,
+          accountType: 'Brigadeiro');
 
       await _accountService.addAccount(example);
     } on Exception {
