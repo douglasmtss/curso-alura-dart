@@ -1,8 +1,8 @@
-# flutter-dart-alura-studies
-Iniciando os estudos sobre Dart e Flutter na Alura.
+# Curso de Dart na Alura
+Iniciando os estudos sobre Dart na Alura.
 
 
-## Mobile > Cursos de Flutter
+## Mobile > Cursos de Dart
 
 - [Curso de Dart: trabalhando com a sintaxe e configuração de projeto](./curso_dart_trabalhando_com_a_sintaxe_e_configuracao_de_projeto/)
 
